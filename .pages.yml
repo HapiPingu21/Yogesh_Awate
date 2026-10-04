@@ -1,0 +1,39 @@
+media:
+  input: public/assets
+  output: /assets
+
+content:
+  - name: portfolio
+    label: Portfolio content
+    type: file
+    path: src/data/content.json
+    fields:
+      - name: capabilities
+        label: Capabilities
+        type: object
+        list: true
+        fields:
+          - { name: icon, label: Icon key, type: select, options: [forecasting, ml, cloud, leadership] }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Description, type: text }
+      - name: work
+        label: Featured work
+        type: object
+        list: true
+        fields:
+          - { name: eyebrow, label: Category, type: string }
+          - { name: title, label: Project title, type: string }
+          - { name: text, label: Description, type: text }
+      - name: roles
+        label: Experience
+        type: object
+        list: true
+        fields:
+          - { name: period, label: Period, type: string }
+          - { name: role, label: Role, type: string }
+          - { name: company, label: Company, type: string }
+          - { name: copy, label: Description, type: text }
+          - name: tags
+            label: Skills
+            type: string
+            list: true

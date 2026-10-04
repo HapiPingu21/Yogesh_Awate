@@ -1,0 +1,28 @@
+{
+  "profile": {
+    "name": "Yogesh Awate",
+    "title": "Senior Data Scientist",
+    "email": "awateyogeshs@gmail.com",
+    "location": "Pune, India",
+    "linkedin": "https://www.linkedin.com/in/yogesh-s-awate/",
+    "medium": "https://medium.com/@yogeshinawate",
+    "twitter": "https://twitter.com/YogeshSAwate1"
+  },
+  "capabilities": [
+    {"icon":"forecasting","title":"Forecasting systems","text":"Reliable engines, post-processing guardrails and large-scale validation built for real business decisions."},
+    {"icon":"ml","title":"Applied machine learning","text":"From elasticity and segmentation to computer vision, NLP and conversational AI."},
+    {"icon":"cloud","title":"Cloud & MLOps","text":"Azure, Databricks, ADLS, ADF and MLflow workflows engineered for production."},
+    {"icon":"leadership","title":"Technical leadership","text":"Architecture, stakeholder alignment, team development and hands-on delivery - end to end."}
+  ],
+  "work": [
+    {"eyebrow":"FORECASTING · NIELSENIQ","title":"Forecast at scale","text":"Price forecasting, traffic-light classification, model guardrails, test benches and robust observability - designed to make every run more trustworthy."},
+    {"eyebrow":"GENERATIVE AI · UNILEVER","title":"Ask the data","text":"A conversational data assistant combining LangChain, ChatGPT and Azure Cognitive Search for fast, useful answers across enterprise data."},
+    {"eyebrow":"COMPUTER VISION · PIT500","title":"Vision in motion","text":"Recognition APIs for people, places, bike accessories and brands, shipped alongside an insight-rich analytics dashboard."}
+  ],
+  "roles": [
+    {"period":"2025 - NOW","role":"Senior Data Scientist","company":"NielsenIQ","copy":"Modernizing forecasting systems at scale - from legacy migration and coefficient extraction to MLflow-powered experimentation and production-grade PySpark pipelines.","tags":["Forecasting","Databricks","PySpark","MLflow"]},
+    {"period":"2022 - 2025","role":"Data Scientist · Team Lead","company":"Saama Technologies","copy":"Led a team of seven building trade promotion analytics for Unilever, including demand, price-elasticity and cannibalization models plus an LLM-powered data assistant.","tags":["Team Lead","LLMs","Azure","TPA"]},
+    {"period":"2020 - 2022","role":"Data Scientist (L2)","company":"IVL Global","copy":"Built computer-vision, recognition and insight products - from FaceNet and YOLO APIs to business intelligence dashboards.","tags":["Computer Vision","NLP","AWS","Power BI"]},
+    {"period":"2017 - 2020","role":"Research to Data Science","company":"IISc · Fabelizer · Abhay Tech","copy":"Worked on multispectral imagery, semantic segmentation, speech models, document intelligence and production Flask APIs.","tags":["Deep Learning","OCR","RASA","Research"]}
+  ]
+}

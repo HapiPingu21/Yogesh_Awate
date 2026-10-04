@@ -5,24 +5,29 @@ import{motion,useMotionValue,useScroll,useSpring,useTransform}from'motion/react'
 import'./style.css';
 import'./hero.css';
 import'./hero-v2.css';
+import siteData from'./data/content.json';
 
-const roles=[
+const fallbackRoles=[
  {period:'2025 — NOW',role:'Senior Data Scientist',company:'NielsenIQ',copy:'Modernizing forecasting systems at scale—from legacy migration and coefficient extraction to MLflow-powered experimentation and production-grade PySpark pipelines.',tags:['Forecasting','Databricks','PySpark','MLflow']},
  {period:'2022 — 2025',role:'Data Scientist · Team Lead',company:'Saama Technologies',copy:'Led a team of seven building trade promotion analytics for Unilever, including demand, price-elasticity and cannibalization models plus an LLM-powered data assistant.',tags:['Team Lead','LLMs','Azure','TPA']},
  {period:'2020 — 2022',role:'Data Scientist (L2)',company:'IVL Global',copy:'Built computer-vision, recognition and insight products—from FaceNet and YOLO APIs to business intelligence dashboards.',tags:['Computer Vision','NLP','AWS','Power BI']},
  {period:'2017 — 2020',role:'Research → Data Science',company:'IISc · Fabelizer · Abhay Tech',copy:'Cut my teeth on multispectral imagery, semantic segmentation, speech models, document intelligence and production Flask APIs.',tags:['Deep Learning','OCR','RASA','Research']}
 ];
-const capabilities=[
+const fallbackCapabilities=[
  {icon:ChartNoAxesCombined,title:'Forecasting systems',text:'Reliable engines, post-processing guardrails and large-scale validation built for real business decisions.'},
  {icon:BrainCircuit,title:'Applied machine learning',text:'From elasticity and segmentation to computer vision, NLP and conversational AI.'},
  {icon:Cloud,title:'Cloud & MLOps',text:'Azure, Databricks, ADLS, ADF and MLflow workflows engineered for production.'},
  {icon:Layers3,title:'Technical leadership',text:'Architecture, stakeholder alignment, team development and hands-on delivery—end to end.'}
 ];
-const work=[
+const fallbackWork=[
  {n:'01',eyebrow:'FORECASTING · NIELSENIQ',title:'Forecast at scale',text:'Price forecasting, traffic-light classification, model guardrails, test benches and robust observability—designed to make every run more trustworthy.',className:'work-a'},
  {n:'02',eyebrow:'GENERATIVE AI · UNILEVER',title:'Ask the data',text:'A conversational data assistant combining LangChain, ChatGPT and Azure Cognitive Search for fast, useful answers across enterprise data.',className:'work-b'},
  {n:'03',eyebrow:'COMPUTER VISION · PIT500',title:'Vision in motion',text:'Recognition APIs for people, places, bike accessories and brands, shipped alongside an insight-rich analytics dashboard.',className:'work-c'}
 ];
+const iconMap={forecasting:ChartNoAxesCombined,ml:BrainCircuit,cloud:Cloud,leadership:Layers3};
+const roles=siteData.roles||fallbackRoles;
+const capabilities=(siteData.capabilities||fallbackCapabilities).map((item,i)=>({...item,icon:iconMap[item.icon]||fallbackCapabilities[i]?.icon||BrainCircuit}));
+const work=(siteData.work||fallbackWork).map((item,i)=>({...item,n:String(i+1).padStart(2,'0'),className:`work-${String.fromCharCode(97+i)}`}));
 
 function App(){
  const[open,setOpen]=useState(false);const[scrolled,setScrolled]=useState(false);
